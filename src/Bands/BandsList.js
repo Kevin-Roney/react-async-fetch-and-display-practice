@@ -3,7 +3,7 @@ import Band from './Band';
 
 export default function BandsList({ bands }) {
   return (
-    <div>
+    <div className='band-list'>
       {
         bands.map((band, i) =>
           <Band 
