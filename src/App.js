@@ -20,13 +20,9 @@ function App() {
   });
   return (
     <div className="App">
-      {
-        isLoading
-          ? <Spinner />
-          : <BandsList 
-            bands={bands}
-          />
-      }
+      <BandsList 
+        bands={bands}/>
+
     </div>
   );
 }

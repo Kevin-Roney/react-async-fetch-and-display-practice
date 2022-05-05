@@ -8,7 +8,10 @@ export default function BandsList({ bands }) {
         bands.map((band, i) =>
           <Band 
             key={`${band.name}-${i}`}
-            bands={bands}
+            name={band.name}
+            genre={band.genre}
+            subgenre={band.subgenre}
+            year_founded={band.year_founded}
           />)
       }
     </div>
