@@ -5,16 +5,26 @@ import './App.css';
 
 function App() {
   const [bands, setBands] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(async () => {
-
+    setIsLoading(true);
     const bandsResponse = await getBands();
 
+
+
+    setIsLoading(false);
     setBands(bandsResponse);
   });
   return (
     <div className="App">
-      
+      {
+        isLoading
+          ? <Spinner />
+          : <BandsList 
+            bands={bands}
+          />
+      }
     </div>
   );
 }
