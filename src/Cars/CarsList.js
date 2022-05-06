@@ -4,7 +4,7 @@ import Car from './Car';
 
 export default function CarsList({ cars }) {
   return (
-    <div>
+    <div className='car-list'>
       {
         cars.map((car, i) =>
           <Car 
