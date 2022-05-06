@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Candy({ candy }) {
   return (
-    <div>
+    <div className='candy'>
       <h2>{candy.name}</h2>
       <p>Brand: {candy.brand}</p>
       <p>Year Invented: {candy.year}</p>

@@ -37,3 +37,21 @@
 .interior-item {
   margin: 5px;
 }
+
+.candy-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.candy {
+  margin: 10px;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  margin: 5px;
+}
