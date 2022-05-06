@@ -8,7 +8,6 @@ import BandsList from './Bands/BandsList';
 import InstrumentsList from './Instruments/InstrumentsList.js';
 import CarsList from './Cars/CarsList';
 import CandiesList from './Candies/CandiesList';
-import Spinner from './Spinner/Spinner';
 import './App.css';
 
 function App() {
@@ -34,27 +33,20 @@ function App() {
     setCandies(candiesResponse);
   }, []);
   return (
-    <div className="App">
+    <div className={`App is-loading-${isLoading}`}>
       <h1>My Lists!</h1>
-      {
-        isLoading
-          ? <Spinner />
-          : 
-          <>
-            <BandsList
-              bands={bands} 
-            />
-            <InstrumentsList
-              instruments={instruments} 
-            />
-            <CarsList
-              cars={cars} 
-            />
-            <CandiesList
-              candies={candies} 
-            />
-          </>
-      }
+      <BandsList
+        bands={bands} 
+      />
+      <InstrumentsList
+        instruments={instruments} 
+      />
+      <CarsList
+        cars={cars} 
+      />
+      <CandiesList
+        candies={candies} 
+      />
     </div>
   );
 }

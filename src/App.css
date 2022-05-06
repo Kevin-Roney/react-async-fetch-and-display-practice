@@ -55,3 +55,11 @@
 .category-item {
   margin: 5px;
 }
+
+.is-loading-true {
+  cursor: wait;
+}
+
+.is-loading-false {
+  cursor: default;
+}
