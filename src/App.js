@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { getBands } from './services/fetch-utils.js';
 import { getInstruments } from './services/fetch-utils.js';
 import BandsList from './Bands/BandsList';
+import InstrumentsList from './Instruments/InstrumentsList.js';
 //import Spinner from './Spinner/Spinner';
 import './App.css';
 
@@ -26,7 +27,9 @@ function App() {
     <div className="App">
       <BandsList 
         bands={bands}/>
-
+      <InstrumentsList 
+        instruments={instruments}
+      />
     </div>
   );
 }
