@@ -3,7 +3,7 @@ import Instrument from './Instrument';
 
 export default function InstrumentsList({ instruments }) {
   return (
-    <div>
+    <div className='instrument-list'>
       {
         instruments.map((instrument, i) => 
           <Instrument 
