@@ -19,3 +19,17 @@
 .instrument {
   margin: 10px;
 }
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car {
+  margin: 10px;
+}
+
+.interior {
+  display: flex;
+  flex-wrap: wrap;
+}
