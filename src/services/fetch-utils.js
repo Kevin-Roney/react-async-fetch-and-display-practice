@@ -23,3 +23,11 @@ export async function getCars() {
   
   return response.body;
 }
+
+export async function getCandies() {
+  const response = await client
+    .from('candies')
+    .select('*');
+  
+  return response.body;
+}
