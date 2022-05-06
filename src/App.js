@@ -30,6 +30,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <h1>My Lists!</h1>
       <BandsList 
         bands={bands}
       />
