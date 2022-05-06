@@ -7,3 +7,11 @@ export async function getBands() {
 
   return response.body;
 }
+
+export async function getInstruments() {
+  const response = await client
+    .from('instruments')
+    .select('*');
+  
+  return response.body;
+}
