@@ -15,3 +15,11 @@ export async function getInstruments() {
   
   return response.body;
 }
+
+export async function getCars() {
+  const response = await client
+    .from('cars')
+    .select('*');
+  
+  return response.body;
+}
