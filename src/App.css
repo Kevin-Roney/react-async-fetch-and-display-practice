@@ -10,3 +10,12 @@
 .band {
   margin: 10px;
 }
+
+.instrument-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.instrument {
+  margin: 10px;
+}
