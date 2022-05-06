@@ -8,7 +8,7 @@ import BandsList from './Bands/BandsList';
 import InstrumentsList from './Instruments/InstrumentsList.js';
 import CarsList from './Cars/CarsList';
 import CandiesList from './Candies/CandiesList';
-//import Spinner from './Spinner/Spinner';
+import Spinner from './Spinner/Spinner';
 import './App.css';
 
 function App() {
@@ -16,10 +16,10 @@ function App() {
   const [instruments, setInstruments] = useState([]);
   const [cars, setCars] = useState([]);
   const [candies, setCandies] = useState([]);
-  //const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(async () => {
-    //setIsLoading(true);
+    setIsLoading(true);
     const bandsResponse = await getBands();
     const instrumentsResponse = await getInstruments();
     const carsResponse = await getCars();
@@ -27,7 +27,7 @@ function App() {
 
 
 
-    //setIsLoading(false);
+    setIsLoading(false);
     setBands(bandsResponse);
     setInstruments(instrumentsResponse);
     setCars(carsResponse);
@@ -36,18 +36,25 @@ function App() {
   return (
     <div className="App">
       <h1>My Lists!</h1>
-      <BandsList 
-        bands={bands}
-      />
-      <InstrumentsList 
-        instruments={instruments}
-      />
-      <CarsList 
-        cars={cars}
-      />
-      <CandiesList 
-        candies={candies}
-      />
+      {
+        isLoading
+          ? <Spinner />
+          : 
+          <>
+            <BandsList
+              bands={bands} 
+            />
+            <InstrumentsList
+              instruments={instruments} 
+            />
+            <CarsList
+              cars={cars} 
+            />
+            <CandiesList
+              candies={candies} 
+            />
+          </>
+      }
     </div>
   );
 }
